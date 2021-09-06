@@ -57,7 +57,13 @@ header {
     font-weight: 500;
     border: none;
     border-radius: 0.2rem;
+    border: 2px solid #fff;
     transition: 0.3s;
+}
+
+.search:hover,
+.search:focus {
+    border: 2px solid #FD7097;
 }
 
 
@@ -92,7 +98,7 @@ header {
 
 .notes {
     width: 70%;
-    max-height: 300px;
+    max-height: 60vh;
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
@@ -161,6 +167,12 @@ header {
     border: none;
     border-radius: 0.2rem;
     transition: 0.3s;
+    border: 2px solid #fff;
+}
+
+.add-new:hover,
+.add-new:focus {
+    border: 2px solid #FD7097;
 }
 
 @media only screen and (max-width: 500px) {
