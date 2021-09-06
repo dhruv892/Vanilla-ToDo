@@ -1,6 +1,8 @@
-# A Vanilla Javascript Todo
+# A Vanilla Javascript Notes App
 
-- Built-in nice UI/UX
-- All the common features
+- Built-in Great UI/UX
+- Add new Note
+- Delete Note
+- Search Notes
 
 *more information will be updated soon
