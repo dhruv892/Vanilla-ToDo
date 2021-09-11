@@ -7,4 +7,7 @@
 - Delete Note
 - Search Notes
 
+### Demo site: 
+https://safe-note.netlify.app/
+
 *more information will be updated soon
