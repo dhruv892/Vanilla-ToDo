@@ -66,6 +66,15 @@ header {
     border: 2px solid #FD7097;
 }
 
+.notes{
+    overflow: hidden;
+    padding-right: 8px;
+}
+
+.notes:hover{
+    overflow-y: auto;
+    padding-right: 8px;
+}
 
 /* width */
 
@@ -98,7 +107,7 @@ header {
 
 .notes {
     width: 70%;
-    max-height: 60vh;
+    max-height: 50vh;
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
@@ -128,10 +137,35 @@ header {
     cursor: pointer;
     font-weight: 600;
     transition: 0.1s;
+    color: #374151;
 }
 
 .delete:hover {
-    color: #F87171;
+    /* color: #F87171; */
+    transform: scale(1.3);
+}
+
+.edit {
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s;
+    color: #374151;
+}
+
+.edit:hover {
+    /* color: #2563EB; */
+    transform: scale(1.3);
+}
+
+.copy {
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s;
+    color: #374151;
+}
+
+.copy:hover {
+    /* color: #8B5CF6; */
     transform: scale(1.3);
 }
 
@@ -139,7 +173,21 @@ header {
     display: none;
 }
 
+.icons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.2rem;
+}
+
+.note-content {
+    word-break: break-all;
+    padding: 0 0.2rem;
+}
+
 .new-note {
+    /* position: relative; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -148,12 +196,6 @@ header {
     padding: 0.5rem 0;
     padding-top: 3rem;
     transition: 0.3s;
-}
-
-.label {
-    color: #fff;
-    font-size: larger;
-    font-weight: 600;
 }
 
 .add-new {
@@ -170,6 +212,48 @@ header {
     border: 2px solid #fff;
 }
 
+.btn-send {
+    transition: 0.3s;
+    width: 70%;
+    outline: none;
+    height: 40px;
+    padding: 0.2rem 0.5rem;
+    margin: 0.5rem 1rem;
+    font-size: larger;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    background-color: #E5E7EB;
+}
+.btn-send:focus {
+    background-color: #F3F4F6;
+}
+
+.send {
+    /* position: absolute;
+    top: 5.5rem;
+    right: 6.5rem;
+    z-index: 1111; */
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s;
+    font-size: larger;
+}
+
+.send:hover {
+    transform: scale(1.3);
+}
+
+.label {
+    color: #fff;
+    font-size: larger;
+    font-weight: 600;
+}
+
 .add-new:hover,
 .add-new:focus {
     border: 2px solid #FD7097;
@@ -181,7 +265,7 @@ header {
     }
     .search,
     .notes,
-    .add-new {
+    .add-new, .btn-send {
         width: 90%;
     }
     .brand {
