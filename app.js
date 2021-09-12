@@ -14,6 +14,7 @@ const renderNotes = notes => {
             `<li class="item" data-id=${note._id}>
                 <span class="note-content">${note.note}</span>
                 <div class="icons">
+                    <i class="fas fa-check-circle done" id="done-note"></i>
                     <i class="far fa-copy copy" id="copy-note"></i>
                     <i class="far fa-edit edit" id="edit-note"></i>
                     <i class="far fa-trash-alt delete" id="delete-note"></i>
@@ -121,6 +122,15 @@ allNotes.addEventListener('click', (event) => {
         let noteContent = parent.querySelector('.note-content').textContent;
 
         navigator.clipboard.writeText(noteContent.trim());
+    }
+
+    // strikethrough/done functionality 
+    let doneBtn = event.target.id == "done-note";
+
+    if (doneBtn) {
+        const parent = event.target.parentElement.parentElement;
+        let noteContent = parent.querySelector('.note-content');
+        noteContent.classList.toggle("strikethrough");
     }
 })
 

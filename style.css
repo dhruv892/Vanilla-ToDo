@@ -169,6 +169,18 @@ header {
     transform: scale(1.3);
 }
 
+.done {
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s;
+    color: #374151;
+}
+
+.done:hover {
+    /* color: #8B5CF6; */
+    transform: scale(1.3);
+}
+
 .filtered {
     display: none;
 }
@@ -179,6 +191,10 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 0.2rem;
+}
+
+.strikethrough {
+    text-decoration: line-through
 }
 
 .note-content {
