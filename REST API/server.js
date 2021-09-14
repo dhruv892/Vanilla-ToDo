@@ -13,6 +13,14 @@ db.once('open', ()=> console.log('connected to database'))
 
 app.use(express.json())
 
+const cors = require("cors")
+const corsOpt = {
+    origin:'*',
+    credentials:true,
+    optionSuccessStatus:200,
+}
+app.use(cors(corsOpt))
+
 const notesRouter = require('./routes/notes')
 app.use('/notes', notesRouter)
 
